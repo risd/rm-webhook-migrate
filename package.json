@@ -1,10 +1,17 @@
 {
   "name": "rm-webhook-migrate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "rm-wh-migrate": "bin/cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/risd/rm-webhook-migrate.git"
   },
   "author": "",
   "license": "ISC",
