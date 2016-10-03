@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "debug": "^2.2.0",
-    "webhook-migrate": "^1.0.2",
+    "webhook-migrate": "^1.0.3",
     "xtend": "^4.0.1"
   }
 }
