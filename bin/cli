@@ -21,8 +21,12 @@ var mediaOptions = {
 var optionsFromArguments = mapArgumentsToOptions(process.argv);
 
 var options = extend(firebaseConf, optionsFromArguments, mediaOptions);
+var backup = options.backup;
+delete options.backup;
 
-require('../')(options);
+debug(options);
+
+require('../')(backup, options);
 
 function getUserHome() {
   return process.env[

@@ -1,5 +1,5 @@
 module.exports = RMMigrate;
 
-function RMMigrate (options) {
-  return require('webhook-migrate')(options)
+function RMMigrate (backup, options) {
+  return require('webhook-migrate')(backup, options)
 }
