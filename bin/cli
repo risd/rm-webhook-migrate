@@ -15,7 +15,7 @@ var whConfRequiredKeys = ['secretKey', 'siteName'];
 var firebaseConf = getConf(whConfPath, whConfRequiredKeys);
 
 var mediaOptions = {
-  uploadUrl: 'http://' +  mediaConf.server + '/upload-url/'
+  uploadUrl: ( mediaConf.server.startsWith( 'http' ) ? mediaConf.server :  'http://' ) + '/upload-url/'
 };
 
 var optionsFromArguments = mapArgumentsToOptions(process.argv);
@@ -26,7 +26,10 @@ delete options.backup;
 
 debug(options);
 
-require('../')(backup, options);
+require('../')(backup, options, function ( error, updatedBackup ) {
+  if ( error ) return console.log( error )
+  debug( 'updated-backup:' + updatedBackup )
+});
 
 function getUserHome() {
   return process.env[
