@@ -51,7 +51,7 @@ This will update the `.firebase.conf` template, along with other core site gener
 
 5. Run this migration tool to migrate the `/webhook-uploads/` directory
 
-`rm-wh-migrate webhook-hosted-backup.json systems-restore-point.json --from={webhook-site-name.webhook.org}`
+`rm-wh migrate webhook-hosted-backup.json systems-restore-point.json --from={webhook-site-name.webhook.org}`
 
 6. Restore from migrated backup
 
