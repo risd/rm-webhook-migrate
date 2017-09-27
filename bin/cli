@@ -27,8 +27,8 @@ delete options.backup;
 debug(options);
 
 require('../')(backup, options, function ( error, updatedBackup ) {
-  if ( error ) return console.log( error )
-  debug( 'updated-backup:' + updatedBackup )
+  if ( error ) console.log( 'errors written to: ' + options.migrated + '.errors' )
+  console.log( 'data written to: ' + options.migrated )
 });
 
 function getUserHome() {
